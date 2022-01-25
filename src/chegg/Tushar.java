@@ -5,7 +5,11 @@ import java.util.Scanner;
 public class Tushar {
 
     public static void main(String[] args) {
+
+        long totalmem = Runtime.getRuntime().totalMemory();
+
         Scanner sc = new Scanner(System.in);
+
         System.out.println("Enter Customer id : ");
         int cId = sc.nextInt();
         System.out.println("Enter Unit price : ");
@@ -19,6 +23,7 @@ public class Tushar {
         System.out.println("Total Price (Before Discount) : "+total_bef);
         System.out.println("Total Price (After Discount) : "+total_aft);
 
+        long totalaf = Runtime.getRuntime().totalMemory();
     }
     public static int testCase(String str){
         if(str != null) {
@@ -29,3 +34,18 @@ public class Tushar {
     }
 
 }
+
+
+/**
+ * long maxMemory=Runtime.getRuntime().maxMemory();
+ * long toBeFilled=100  1000 1024;
+ * long totalMemory= Runtime.getRuntime().totalMemory();
+ * long usedMemory=totalMemory - Runtime.getRuntime().freeMemory();
+ *
+ *
+ *
+ * long startTime = Calendar.getInstance().getTimeInMillis();
+ * long currentTimeDuration = System.currentTimeMillis() - startTime;
+ *
+ *
+ * */
