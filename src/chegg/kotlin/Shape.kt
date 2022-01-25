@@ -1,5 +1,7 @@
 package chegg.kotlin
 
+import kotlin.math.sqrt
+
 open class Shape {
 
     constructor() {}
@@ -38,14 +40,14 @@ open class Shape {
     }
 
     open fun printDimensions() {
-        println("No dimensions");
+        println("No dimensions")
     }
 }
 
 
-open class Square() : Shape() {
-    private var length = 0.0;
-    private var height = 0.0;
+open class Square : Shape() {
+    private var length = 0.0
+    private var height = 0.0
     override fun getArea() {
         println("Area is : " + length * height)
     }
@@ -62,8 +64,8 @@ open class Square() : Shape() {
     }
 }
 
-open class Circle() : Shape() {
-    private var radius = 0.0;
+open class Circle : Shape() {
+    private var radius = 0.0
     override fun getArea() {
         println("Area is " + Math.PI * radius * radius)
     }
@@ -78,13 +80,13 @@ open class Circle() : Shape() {
     }
 }
 
-open class Triangle() : Shape() {
-    private var a = 0.0;
-    private var b = 0.0;
-    private var c = 0.0;
+open class Triangle : Shape() {
+    private var a = 0.0
+    private var b = 0.0
+    private var c = 0.0
     override fun getArea() {
-        val s = (a + b + c) / 2.0;
-        println("Area is " + Math.sqrt(s * (s - a) * (s - b) * (s - c)))
+        val s = (a + b + c) / 2.0
+        println("Area is " + sqrt(s * (s - a) * (s - b) * (s - c)))
     }
 
     open fun setDimensions() {
@@ -101,10 +103,10 @@ open class Triangle() : Shape() {
     }
 }
 
-class EquilateralTriangle() : Triangle() {
-    var a = 0.0;
+class EquilateralTriangle : Triangle() {
+    private var a = 0.0
     override fun getArea() {
-        println("Area is " + Math.sqrt(3.0) * a * a / 4)
+        println("Area is " + sqrt(3.0) * a * a / 4)
     }
 
     override fun setDimensions() {
