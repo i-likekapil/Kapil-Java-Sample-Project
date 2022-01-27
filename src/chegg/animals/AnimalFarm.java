@@ -21,8 +21,9 @@ public class AnimalFarm {
         animalFarm.lowerBound(dogs);
     }
 
-    public void lowerBound(List<Animal>obj) {
-        System.out.println(obj.get(0).sound());
+    public void lowerBound(List<? super Dog>obj) {
+        Animal dog = (Animal) obj.get(0);
+        System.out.println(dog.sound());
     }
 
     public void upperBound(List<? extends Animal> obj) {
