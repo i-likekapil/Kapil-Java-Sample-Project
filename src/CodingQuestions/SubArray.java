@@ -3,9 +3,9 @@ package CodingQuestions;
 public class SubArray {
     public static void main(String[] args) {
         int[] arr = new int[]{2,3,3,5,5,8};
-        int key = 5;
-        System.out.println(getLeft(arr,key,0, arr.length));
-        System.out.println(getRight(arr,key,0, arr.length));
+        int key = 4;
+        //System.out.println(getLeft(arr,key,0, arr.length));
+        System.out.println(getRightA(arr,key));
     }
 
     private static int getRight(int[] arr, int key,int start, int end){
@@ -25,13 +25,14 @@ public class SubArray {
         return getLeft(arr,key,mid+1,end);
     }
 
-
     private static int getRightA(int[] arr, int key) {
-        if (arr[arr.length - 1] == key) return arr.length - 1;
+        if(arr[0] > key) return arr[0];
+        if (arr[arr.length - 1] == key) return arr[arr.length - 1];
         int start = 0, end = arr.length - 1;
         while (start <= end) {
             int mid = (end + start) / 2;
-            if (arr[mid] == key && arr[mid + 1] > key) return mid;
+            if(arr[mid]==key) return arr[mid];
+            if (arr[mid] > key && arr[mid - 1] < key) return arr[mid];
             else if (arr[mid] > key) end -= 1;
             else start += 1;
         }

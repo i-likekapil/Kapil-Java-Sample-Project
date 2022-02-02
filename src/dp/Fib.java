@@ -31,5 +31,7 @@ public class Fib {
         usedMemory = totalMemory - Runtime.getRuntime().freeMemory();
         System.out.println("time is " + currentTimeDuration);
         System.out.println("memory is " + usedMemory);
+
+        System.out.println(new Fib().getClass().getName().contains("dp.Fib"));
     }
 }
