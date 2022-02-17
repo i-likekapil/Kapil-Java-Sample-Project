@@ -1,14 +1,17 @@
 package chegg;
 
-import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 class TusharTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void main() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void testCase() {
         assertEquals(5,Tushar.testCase("kapil"));
         //assertEquals(-1,Tushar.testCase(null));
