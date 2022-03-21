@@ -1,6 +1,6 @@
 package chegg.kotlin
 
-import kotlin.math.sqrt
+import kotlin.math.sqrt;
 
 open class Shape {
 
